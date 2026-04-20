@@ -16,7 +16,8 @@ class DrupalExtension extends OriginalDrupalExtension {
   /**
    * {@inheritdoc}
    */
-  public function load(ContainerBuilder $container, array $config) {
+  public function load(ContainerBuilder $container, array $config): void {
+    parent::load($container, $config);
     parent::load($container, $config);
 
     // Load default service definitions.
@@ -52,7 +53,7 @@ class DrupalExtension extends OriginalDrupalExtension {
   /**
    * {@inheritdoc}
    */
-  public function configure(ArrayNodeDefinition $builder) {
+  public function configure(ArrayNodeDefinition $builder): void {
     parent::configure($builder);
 
     $builder->append(
