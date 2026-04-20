@@ -18,7 +18,6 @@ class DrupalExtension extends OriginalDrupalExtension {
    */
   public function load(ContainerBuilder $container, array $config): void {
     parent::load($container, $config);
-    parent::load($container, $config);
 
     // Load default service definitions.
     $container_overrides = new ContainerBuilder();
